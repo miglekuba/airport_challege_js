@@ -1,6 +1,6 @@
 'use strict';
 
-describe ("AirportChallenge", () => {
+describe ("Plane Landing", () => {
     let plane;
     let airport;
 
@@ -10,7 +10,8 @@ beforeEach(() => {
     });
 
 it('lands the plane at the airport', () => {
-    plane.land();
-    expect(airport.planes()).toContain(plane);
+    plane.land(airport)
+    expect(airport.planes).toContain(plane);
     });
-});
+}); 
+
