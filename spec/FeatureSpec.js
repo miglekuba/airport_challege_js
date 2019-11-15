@@ -1,19 +1,16 @@
 'use strict';
 
-describe('Feature Test:', function() {
-  //declaring variables fo plane and airport 
-    var plane;
-    var airport;
+describe ("AirportChallenge", () => {
+    let plane;
+    let airport;
 
-// before each function new instances of plane and airport will be created
-    beforeEach(function() {
-        plane = new Plane();
-        airport = new Airport();
+beforeEach(() => {
+    plane = new Plane();
+    airport = new Airport();
     });
 
-//first test 
-it('planes can land at the airport', function () {
-plane.land(airport);
-expect(airport.planes()).toContain(plane);
-});
+it('lands the plane at the airport', () => {
+    plane.land();
+    expect(airport.planes()).toContain(plane);
+    });
 });
